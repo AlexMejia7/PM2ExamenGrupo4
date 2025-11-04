@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <!-- Botón Atrás -->
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atrás"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- EditText para búsqueda -->
+    <EditText
+        android:id="@+id/etBuscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Buscar"
+        android:padding="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/btnAtras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ListView de contactos -->
+    <ListView
+        android:id="@+id/lvContactos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        app:layout_constraintTop_toBottomOf="@id/etBuscar"
+        app:layout_constraintBottom_toTopOf="@id/btnEliminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botones en la parte inferior: 3 botones iguales -->
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnActualizar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintStart_toEndOf="@id/btnEliminar"
+        app:layout_constraintEnd_toStartOf="@id/btnVerVideo"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/btnVerVideo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Video"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/btnActualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
