@@ -56,7 +56,7 @@ class ListaActivity : AppCompatActivity() {
             val contacto = contactos[position]
             AlertDialog.Builder(this)
                 .setTitle("Ver ubicación")
-                .setMessage("¿Deseas ver la ubicación de ${contacto.nombre}?")
+                .setMessage("¿Deseas ir a  la ubicación de ${contacto.nombre}?")
                 .setPositiveButton("Sí") { _, _ ->
                     val intent = Intent(this, MapaWebActivity::class.java).apply {
                         putExtra("lat", contacto.lat ?: 0.0)
